@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity"
+    android:background="@color/cream">
+
+    <LinearLayout
+        android:id="@+id/cardTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_entry_card"
+        android:gravity="center"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:id="@+id/llLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:id="@+id/ivLoginLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/app_icon_logo_cream"/>
+            <TextView
+                android:id="@+id/tvLoginTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abhyudaya"
+                android:textColor="@color/cream"
+                android:textSize="20sp"
+                android:fontFamily="@font/samarkan"
+                android:layout_marginRight="7dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardTitle"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp">
+
+        <TextView
+            android:id="@+id/txtRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Name"
+            android:textColorHint="@color/transp_black"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_regular"
+            android:backgroundTint="@color/black_cream"
+            android:paddingLeft="15sp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etMobNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Mobile No."
+            android:textColorHint="@color/transp_black"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_regular"
+            android:backgroundTint="@color/black_cream"
+            android:paddingLeft="15sp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Email"
+            android:textColorHint="@color/transp_black"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_regular"
+            android:backgroundTint="@color/black_cream"
+            android:paddingLeft="15sp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etAadhar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Aadhar No."
+            android:textColorHint="@color/transp_black"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_regular"
+            android:backgroundTint="@color/black_cream"
+            android:paddingLeft="15sp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Create Username"
+            android:textColorHint="@color/transp_black"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_regular"
+            android:backgroundTint="@color/black_cream"
+            android:paddingLeft="15sp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Create Password"
+            android:textColorHint="@color/transp_black"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:backgroundTint="@color/black_cream"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingLeft="15sp"
+            android:inputType="textPassword"/>
+
+        <CheckBox
+            android:id="@+id/cbShowPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Show Password"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:buttonTint="@color/black"
+            android:layout_gravity="right"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_shape"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="25dp"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="15dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

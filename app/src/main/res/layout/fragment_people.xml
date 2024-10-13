@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PeopleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/rlSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="10dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svSearchViewPeople"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_search"
+            app:queryHint="Search Person"
+            android:theme="@style/Theme.AbhyudayaWithBlackText"
+            android:layout_toLeftOf="@id/ivAddPeople"
+            app:iconifiedByDefault="false"/>
+
+        <ImageView
+            android:id="@+id/ivAddPeople"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/icon_add"
+            app:tint="@color/white"
+            android:layout_marginVertical="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/headerPeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:layout_below="@id/rlSearchBar">
+
+        <TextView
+            android:id="@+id/TitlePeople"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="People"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/residentsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerPeople"/>
+
+</RelativeLayout>
