@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNoticeActivity">
+    tools:context=".ViewEventActivity">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -31,63 +31,59 @@
             android:paddingTop="5dp"
             android:paddingHorizontal="18dp">
 
-            <EditText
-                android:id="@+id/etNoticeTitle"
+            <TextView
+                android:id="@+id/ttEventSentDT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
-                android:backgroundTint="@color/cream"
-                android:hint="Notice Title"
-                android:inputType="text"
-                android:textColor="@color/white"
-                android:textColorHint="@color/transp_white"
-                android:textSize="18sp" />
+                android:text="Notice Sent Date Time"
+                android:gravity="right"
+                android:textColor="@color/transp_white"
+                android:textSize="16sp" />
 
-            <EditText
-                android:id="@+id/etNoticeDescription"
+            <TextView
+                android:id="@+id/ttEventTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
-                android:backgroundTint="@color/cream"
-                android:hint="Description"
-                android:inputType="textMultiLine"
+                android:text="Notice Title"
                 android:textColor="@color/white"
-                android:textColorHint="@color/transp_white"
                 android:textSize="18sp" />
 
+            <TextView
+                android:id="@+id/ttEventDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:text="Description"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ttEventContribution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:text="Event Contribution"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ttEventDdateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:text="Event Date and Time"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
             <ImageView
-                android:id="@+id/ivImageNotice"
+                android:id="@+id/ivImageEvent"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/mid_black_cream"/>
-
-            <TextView
-                android:id="@+id/tvAddNoticeImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="20dp"
-                android:text="Upload Photo"
-                android:textColor="@color/white"
-                android:drawableRight="@drawable/icon_add_a_photo"
-                android:drawableTint="@color/white"
-                android:drawablePadding="5dp"
-                android:textSize="18sp"
-                android:layout_gravity="right"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnAddNotice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="30dp"
-                android:background="@drawable/btn_shape_cream"
-                android:paddingHorizontal="20dp"
-                android:text="Continue"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:background="@color/mid_black_cream"
+                android:visibility="gone"/>
 
         </LinearLayout>
 

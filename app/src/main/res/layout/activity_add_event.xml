@@ -44,14 +44,13 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/etDescription"
+                android:id="@+id/etEventDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
                 android:backgroundTint="@color/cream"
                 android:hint="Description"
                 android:inputType="textMultiLine"
-
                 android:textColor="@color/white"
                 android:textColorHint="@color/transp_white"
                 android:textSize="18sp" />
@@ -95,7 +94,7 @@
                 android:background="@color/mid_black_cream"/>
 
             <TextView
-                android:id="@+id/tvAddImage"
+                android:id="@+id/tvAddEventImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -109,7 +108,7 @@
                 android:layout_gravity="right"/>
 
             <EditText
-                android:id="@+id/etContribution"
+                android:id="@+id/etEventContribution"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
@@ -123,7 +122,7 @@
                 android:drawablePadding="10dp"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnAddPerson"
+                android:id="@+id/btnAddEvent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

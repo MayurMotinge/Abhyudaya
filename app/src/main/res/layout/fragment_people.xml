@@ -35,34 +35,12 @@
             android:layout_marginLeft="5dp"
             android:layout_alignParentEnd="true"/>
 
-
     </RelativeLayout>
 
-
-    <RelativeLayout
-        android:id="@+id/headerPeople"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="15dp"
-        android:paddingVertical="5dp"
-        android:layout_below="@id/rlSearchBar">
-
-        <TextView
-            android:id="@+id/TitlePeople"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:gravity="center"
-            android:text="People"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:layout_centerVertical="true" />
-
-    </RelativeLayout>
-
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/residentsList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/headerPeople"/>
+        android:layout_below="@id/rlSearchBar"/>
 
 </RelativeLayout>

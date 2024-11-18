@@ -118,7 +118,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 if (valid){
                     Toast.makeText(RegistrationActivity.this, "Logged in Successfully",
                             Toast.LENGTH_SHORT).show();
-                    Intent intnt = new Intent(RegistrationActivity.this, FillSocietyInfoActivity.class);
+                    Intent intnt = new Intent(RegistrationActivity.this, LoginActivity.class);
                     startActivity(intnt);
                     finish();
 

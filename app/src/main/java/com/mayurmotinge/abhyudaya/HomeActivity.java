@@ -1,12 +1,9 @@
 package com.mayurmotinge.abhyudaya;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,7 +20,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
     BottomNavigationView bnvHome;
     ImageView ivProfile;
-    TextView tvPageMessage;
+    TextView tvPageTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +39,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         bnvHome.setOnNavigationItemSelectedListener(this);
         bnvHome.setSelectedItemId(R.id.home);
 
-        tvPageMessage = findViewById(R.id.tvPageMessage);
+        tvPageTitle = findViewById(R.id.tvPageTitle);
 
         ivProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,17 +62,17 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         if (item.getItemId() == R.id.home){
             getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,
                     homeFragment).commit();
-
             return true;
+
         } else if (item.getItemId() == R.id.people){
             getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,
                     peopleFragment).commit();
-
             return true;
+
+
         } else if (item.getItemId() == R.id.maintenance){
             getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,
                     maintenanceFragment).commit();
-
             return true;
         }
         return true;

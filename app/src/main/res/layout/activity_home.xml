@@ -15,12 +15,13 @@
         android:elevation="10dp">
 
         <TextView
-            android:id="@+id/tvPageMessage"
+            android:id="@+id/tvPageTitle"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:paddingHorizontal="15dp"
             android:gravity="center_vertical"
-            android:text="Hello"
+            android:text="Abhyudaya"
+            android:fontFamily="@font/samarkan"
             android:textColor="@color/white"
             android:background="@color/black_cream"
             android:textStyle="bold"
@@ -44,7 +45,8 @@
         android:id="@+id/flOnHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rlHeaderHome"/>
+        android:layout_below="@+id/rlHeaderHome"
+        android:layout_above="@+id/bottom_navigation"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -54,6 +56,6 @@
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_manu_home"
         android:theme="@style/Theme.AbhyudayaWithBlackText"
-        android:background="@drawable/bottom_menu_shape" />
+        android:background="@color/tan" />
 
 </RelativeLayout>

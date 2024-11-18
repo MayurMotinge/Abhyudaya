@@ -7,6 +7,7 @@
     <color name="transp">#00000000</color>
     <color name="transp_white">#80FFFFFF</color>
     <color name="transp_black">#80000000</color>
+    <color name="transp_black2">#B0000000</color>
 
     <color name="tan">#B68D40</color>
     <color name="black_tan">#5c4720</color>
