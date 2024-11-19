@@ -33,4 +33,10 @@
 
 
     </style>
+
+    <style name="AppTheme.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
 </resources>
