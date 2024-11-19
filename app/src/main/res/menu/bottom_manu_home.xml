@@ -12,9 +12,9 @@
         android:icon="@drawable/icon_people" />
 
     <item
-        android:id="@+id/maintenance"
-        android:title="Maintenance"
-        android:icon="@drawable/icon_repee_circle" />
+        android:id="@+id/notifications"
+        android:title="Notifications"
+        android:icon="@drawable/icon_bell" />
 
 
 </menu>

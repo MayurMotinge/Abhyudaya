@@ -53,7 +53,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
     HomeFragment homeFragment = new HomeFragment();
     PeopleFragment peopleFragment = new PeopleFragment();
-    MaintenanceFragment maintenanceFragment = new MaintenanceFragment();
+    NotificationsFragment notificationsFragment = new NotificationsFragment();
 
 
     @Override
@@ -70,9 +70,9 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
             return true;
 
 
-        } else if (item.getItemId() == R.id.maintenance){
+        } else if (item.getItemId() == R.id.notifications){
             getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,
-                    maintenanceFragment).commit();
+                    notificationsFragment).commit();
             return true;
         }
         return true;

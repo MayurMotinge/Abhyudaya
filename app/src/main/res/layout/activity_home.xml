@@ -14,17 +14,25 @@
         android:background="@color/black_cream"
         android:elevation="10dp">
 
+        <ImageView
+            android:id="@+id/ivLogoHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/app_icon_logo_black"/>
+
         <TextView
             android:id="@+id/tvPageTitle"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
-            android:paddingHorizontal="15dp"
+            android:paddingHorizontal="10dp"
             android:gravity="center_vertical"
             android:text="Abhyudaya"
             android:fontFamily="@font/samarkan"
             android:textColor="@color/white"
             android:background="@color/black_cream"
-            android:textStyle="bold"
+            android:layout_toRightOf="@id/ivLogoHome"
             android:textSize="25sp"/>
 
         <ImageView
@@ -53,9 +61,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:labelVisibilityMode="labeled"
+        app:labelVisibilityMode="selected"
         app:menu="@menu/bottom_manu_home"
-        android:theme="@style/Theme.AbhyudayaWithBlackText"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         android:background="@color/tan" />
 
 </RelativeLayout>
