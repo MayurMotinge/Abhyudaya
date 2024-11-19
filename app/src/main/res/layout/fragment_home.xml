@@ -4,13 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    tools:ignore="HardcodedText"
+    >
 
     <!-- TODO: Update blank fragment layout -->
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -30,8 +33,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
                     app:cardBackgroundColor="@color/black_cream"
                     app:cardCornerRadius="15dp">
 
@@ -50,15 +53,17 @@
                             android:layout_height="wrap_content"
                             android:text="Maintenance"
                             android:textColor="@color/white"
-                            android:textSize="16sp"/>
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText" />
 
                         <TextView
                             android:id="@+id/tvMaintenanceAmount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Amount"
-                            android:textSize="18dp"
-                            android:textColor="@color/white"/>
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            />
 
                         <TextView
                             android:id="@+id/tvMaintenanceDueDate"
@@ -172,9 +177,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Notice Title"
-                            android:textSize="18dp"
+                            android:textSize="18sp"
                             android:layout_above="@id/ttNoticeDateTime"
-                            android:layout_toLeftOf="@id/ivOptionsNoticeCard"
+                            android:layout_toStartOf="@id/ivOptionsNoticeCard"
                             android:textColor="@color/white"/>
 
                         <TextView
@@ -193,7 +198,7 @@
                             android:src="@drawable/icon_more_vert"
                             android:padding="3dp"
                             android:layout_alignParentBottom="true"
-                            android:layout_alignParentRight="true"/>
+                            android:layout_alignParentEnd="true"/>
 
                     </RelativeLayout>
 
@@ -253,9 +258,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Event Title"
-                            android:textSize="18dp"
+                            android:textSize="18sp"
                             android:layout_above="@id/ttEventDateTime"
-                            android:layout_toLeftOf="@id/ivOptionsEventCard"
+                            android:layout_toStartOf="@id/ivOptionsEventCard"
                             android:textColor="@color/white"/>
 
                         <TextView
@@ -274,7 +279,7 @@
                             android:src="@drawable/icon_more_vert"
                             android:padding="3dp"
                             android:layout_alignParentBottom="true"
-                            android:layout_alignParentRight="true"/>
+                            android:layout_alignParentEnd="true"/>
 
                     </RelativeLayout>
 
