@@ -43,7 +43,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         bnvHome = findViewById(R.id.bottom_navigation);
         bnvHome.setOnNavigationItemSelectedListener(this);
         bnvHome.setSelectedItemId(R.id.home);
-
+        
         ViewCompat.setOnApplyWindowInsetsListener(bnvHome, new OnApplyWindowInsetsListener() {
             @NonNull
             @Override

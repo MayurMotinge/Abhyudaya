@@ -66,6 +66,6 @@
         app:menu="@menu/bottom_manu_home"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
-        android:background="@color/black_tan" />
+        android:background="@color/black_tan"/>
 
 </RelativeLayout>
