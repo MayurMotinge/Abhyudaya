@@ -59,13 +59,11 @@ public class HomeFragment extends Fragment {
         ttNoticeTitle = view.findViewById(R.id.ttNoticeTitle);
         ttNoticeDateTime = view.findViewById(R.id.ttNoticeDateTime);
         ivNoticeCardImage = view.findViewById(R.id.ivNoticeCardImage);
-        ivOptionsNoticeCard = view.findViewById(R.id.ivOptionsNoticeCard);
 
         cvEventBoard = view.findViewById(R.id.cvEventBoard);
         ttEventTitle = view.findViewById(R.id.ttEventTitle);
         ttEventDateTime = view.findViewById(R.id.ttEventDateTime);
         ivEventCardImage = view.findViewById(R.id.ivEventCardImage);
-        ivOptionsEventCard = view.findViewById(R.id.ivOptionsEventCard);
 
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());;
@@ -108,7 +106,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        ivOptionsNoticeCard.setOnClickListener(new View.OnClickListener() {
+        cvNoticeBoard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 PopupMenu popupMenu = new PopupMenu(getActivity(), ivOptionsNoticeCard);
@@ -119,7 +117,7 @@ public class HomeFragment extends Fragment {
                     public boolean onMenuItemClick(MenuItem item) {
 
                         if (item.getItemId() == R.id.open){
-                            Intent i = new Intent(getActivity(), NoticeActivity.class);
+                            Intent i = new Intent(getActivity(), ViewNoticeActivity.class);
                             startActivity(i);
                             return true;
                         }
@@ -135,7 +133,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        ivOptionsEventCard.setOnClickListener(new View.OnClickListener() {
+        cvEventBoard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 PopupMenu popupMenu = new PopupMenu(getActivity(), ivOptionsEventCard);
@@ -146,7 +144,7 @@ public class HomeFragment extends Fragment {
                     public boolean onMenuItemClick(MenuItem item) {
 
                         if (item.getItemId() == R.id.open){
-                            Intent i = new Intent(getActivity(), EventActivity.class);
+                            Intent i = new Intent(getActivity(), ViewEventActivity.class);
                             startActivity(i);
                             return true;
                         }

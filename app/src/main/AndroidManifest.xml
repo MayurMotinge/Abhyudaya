@@ -19,12 +19,6 @@
             android:name=".FeedbackListActivity"
             android:exported="false" />
         <activity
-            android:name=".EventActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NoticeActivity"
-            android:exported="false" />
-        <activity
             android:name=".MaintenancesListActivity"
             android:exported="false" />
         <activity
