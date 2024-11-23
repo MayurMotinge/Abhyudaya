@@ -83,8 +83,6 @@ public class HomeFragment extends Fragment {
             view = setMaintenanceCard(view);
         }
 
-        view = setNoticeCard(view);
-        view = setEventCard(view);
 
         cvMaintenanceCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +96,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), MaintenancesListActivity.class);
+                startActivity(i);
+            }
+        });
+
+        cvFeedbackCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), FeedbackListActivity.class);
                 startActivity(i);
             }
         });

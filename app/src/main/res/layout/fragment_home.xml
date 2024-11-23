@@ -95,7 +95,7 @@
                         android:padding="10dp"
                         android:gravity="bottom"
                         android:background="@drawable/hone_card_bg"
-                        android:backgroundTint="@color/black_tan">
+                        android:backgroundTint="@color/tan">
 
                         <TextView
                             android:id="@+id/tvMaintenanceTitleAdm"
