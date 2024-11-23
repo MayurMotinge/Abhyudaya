@@ -45,7 +45,7 @@
                         android:padding="10dp"
                         android:gravity="bottom"
                         android:background="@drawable/hone_card_bg"
-                        android:backgroundTint="@color/black_tan">
+                        android:backgroundTint="@color/tan">
 
                         <TextView
                             android:id="@+id/tvMaintenanceTitle"
@@ -141,7 +141,7 @@
                     android:layout_weight="1"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    app:cardBackgroundColor="@color/black_tan"
+                    app:cardBackgroundColor="@color/tan"
                     app:cardCornerRadius="15dp">
 
                     <LinearLayout
@@ -209,7 +209,7 @@
                 android:layout_below="@+id/tvTitleNotice"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="@color/mid_black_cream"
+                app:cardBackgroundColor="@color/cream"
                 app:cardCornerRadius="15dp">
 
                 <RelativeLayout
@@ -290,7 +290,7 @@
                 android:layout_below="@+id/tvTitleEventBoard"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="@color/mid_black_cream"
+                app:cardBackgroundColor="@color/cream"
                 app:cardCornerRadius="15dp">
 
                 <RelativeLayout

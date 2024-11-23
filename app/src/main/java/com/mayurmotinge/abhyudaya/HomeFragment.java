@@ -166,24 +166,6 @@ public class HomeFragment extends Fragment {
 
     private View setMaintenanceCardAdm(View view) {
 
-        cvNoticeBoard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getActivity(), AddNoticeActivity.class);
-                startActivity(i);
-
-            }
-        });
-
-        cvEventBoard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getActivity(), AddEventActivity.class);
-                startActivity(i);
-
-            }
-        });
-
         return view;
     }
 
