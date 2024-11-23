@@ -4,11 +4,11 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
 
-        <item name="colorPrimary">@color/tan</item>
+        <item name="colorPrimary">@color/black_cream</item>
         <item name="colorPrimaryDark">@color/black_tan</item>
         <item name="colorAccent">@color/cream</item>
         <item name="android:navigationBarColor">@color/black_tan</item>
-        <item name="android:windowBackground">@color/black_cream</item>
+        <item name="android:windowBackground">@color/black_cream</item>=
 
     </style>
 

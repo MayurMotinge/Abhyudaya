@@ -10,32 +10,34 @@
     <RelativeLayout
         android:id="@+id/rlHeaderProfile"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/black_cream"
         android:elevation="10dp">
 
         <TextView
             android:id="@+id/tvProfileUsername"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:paddingHorizontal="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
             android:gravity="center_vertical"
             android:text="Username"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="25sp"/>
+            android:textSize="24sp"
+            android:layout_centerVertical="true"/>
 
         <TextView
             android:id="@+id/tvProfileHouseNo"
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:paddingHorizontal="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
             android:gravity="center_vertical"
             android:text="house No."
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:layout_alignParentRight="true"/>
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
 
     </RelativeLayout>
 
