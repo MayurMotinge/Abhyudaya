@@ -1,11 +1,14 @@
 package com.mayurmotinge.abhyudaya;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.AppLocalesStorageHelper;
 import androidx.fragment.app.Fragment;
 
 import android.preference.PreferenceManager;
@@ -28,8 +31,8 @@ public class HomeFragment extends Fragment {
             tvFeedbackTitle, tvFeedbackFrom, tvFeedbackType,
             ttNoticeTitle, ttNoticeDateTime, ttEventTitle, ttEventDateTime;
     ImageView ivNoticeCardImage, ivEventCardImage;
-
     SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,6 +69,7 @@ public class HomeFragment extends Fragment {
 
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());;
+        editor = sharedPreferences.edit();
 
 //        String userRole = sharedPreferences.getString("user_role", "");
         String userRole = "admin";
@@ -111,17 +115,21 @@ public class HomeFragment extends Fragment {
                 PopupMenu popupMenu = new PopupMenu(getActivity(), cvNoticeBoard);
                 popupMenu.getMenuInflater().inflate(R.menu.home_cards_menu, popupMenu.getMenu());
 
+                popupMenu.getMenu().removeItem(R.id.viewEvent);
+                popupMenu.getMenu().removeItem(R.id.viewRecentEvents);
+
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
 
-                        if (item.getItemId() == R.id.open){
+                        if (item.getItemId() == R.id.viewNotce){
                             Intent i = new Intent(getActivity(), ViewNoticeActivity.class);
                             startActivity(i);
                             return true;
                         }
-                        else if (item.getItemId() == R.id.viewList) {
+                        else if (item.getItemId() == R.id.viewRecentNotices) {
                             Intent i = new Intent(getActivity(), NoticeEventListActivity.class);
+                            i.putExtra("title", "Recent Notices");
                             startActivity(i);
                             return true;
                         }
@@ -138,17 +146,21 @@ public class HomeFragment extends Fragment {
                 PopupMenu popupMenu = new PopupMenu(getActivity(), cvEventBoard);
                 popupMenu.getMenuInflater().inflate(R.menu.home_cards_menu, popupMenu.getMenu());
 
+                popupMenu.getMenu().removeItem(R.id.viewNotce);
+                popupMenu.getMenu().removeItem(R.id.viewRecentNotices);
+
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
 
-                        if (item.getItemId() == R.id.open){
+                        if (item.getItemId() == R.id.viewEvent){
                             Intent i = new Intent(getActivity(), ViewEventActivity.class);
                             startActivity(i);
                             return true;
                         }
-                        else if (item.getItemId() == R.id.viewList) {
+                        else if (item.getItemId() == R.id.viewRecentEvents) {
                             Intent i = new Intent(getActivity(), NoticeEventListActivity.class);
+                            i.putExtra("title", "Recent Events");
                             startActivity(i);
                             return true;
                         }

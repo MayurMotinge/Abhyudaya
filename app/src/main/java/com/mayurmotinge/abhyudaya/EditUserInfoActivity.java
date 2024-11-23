@@ -54,7 +54,7 @@ public class EditUserInfoActivity extends AppCompatActivity {
 
         cbShowPassword = findViewById(R.id.cbShowPassword);
         rgUserRole = findViewById(R.id.rgUserRole);
-        btnCont = findViewById(R.id.btnCont);
+        btnCont = findViewById(R.id.btnAddPerson);
 
 
 

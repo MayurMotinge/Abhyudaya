@@ -2,11 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/open"
-        android:title="Open This"/>
+        android:id="@+id/viewNotce"
+        android:title="View Notice"/>
 
     <item
-        android:id="@+id/viewList"
-        android:title="View List"/>
+        android:id="@+id/viewRecentNotices"
+        android:title="View Recent Notices"/>
+
+    <item
+        android:id="@+id/viewEvent"
+        android:title="View Event"/>
+
+    <item
+        android:id="@+id/viewRecentEvents"
+        android:title="View Recent Events"/>
 
 </menu>

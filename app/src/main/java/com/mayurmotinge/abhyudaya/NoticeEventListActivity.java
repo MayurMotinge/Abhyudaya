@@ -1,5 +1,6 @@
 package com.mayurmotinge.abhyudaya;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -9,6 +10,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class NoticeEventListActivity extends AppCompatActivity {
+
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +25,9 @@ public class NoticeEventListActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        setTitle("Notice or Events");
+
+        String title = getIntent().getStringExtra("title");
+        setTitle(title);
 
     }
 }
