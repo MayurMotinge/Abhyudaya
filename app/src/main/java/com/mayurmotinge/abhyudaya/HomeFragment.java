@@ -27,8 +27,7 @@ public class HomeFragment extends Fragment {
             tvMaintenanceTitleAdm, tvNoOfMentePaid, tvNoOfMentePending, tvNoOfResidents,
             tvFeedbackTitle, tvFeedbackFrom, tvFeedbackType,
             ttNoticeTitle, ttNoticeDateTime, ttEventTitle, ttEventDateTime;
-    ImageView ivNoticeCardImage, ivEventCardImage,
-            ivOptionsNoticeCard, ivOptionsEventCard;
+    ImageView ivNoticeCardImage, ivEventCardImage;
 
     SharedPreferences sharedPreferences;
 
@@ -109,7 +108,7 @@ public class HomeFragment extends Fragment {
         cvNoticeBoard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(getActivity(), ivOptionsNoticeCard);
+                PopupMenu popupMenu = new PopupMenu(getActivity(), cvNoticeBoard);
                 popupMenu.getMenuInflater().inflate(R.menu.home_cards_menu, popupMenu.getMenu());
 
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -136,7 +135,7 @@ public class HomeFragment extends Fragment {
         cvEventBoard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(getActivity(), ivOptionsEventCard);
+                PopupMenu popupMenu = new PopupMenu(getActivity(), cvEventBoard);
                 popupMenu.getMenuInflater().inflate(R.menu.home_cards_menu, popupMenu.getMenu());
 
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {

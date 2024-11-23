@@ -1,6 +1,8 @@
 package com.mayurmotinge.abhyudaya;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -20,6 +22,9 @@ public class EditUserInfoActivity extends AppCompatActivity {
     RadioGroup rgUserRole;
     AppCompatButton btnCont;
 
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,13 @@ public class EditUserInfoActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        preferences = PreferenceManager.getDefaultSharedPreferences(EditUserInfoActivity.this);
+        editor = preferences.edit();
+
+        String activity_title = preferences.getString("title", "");
+
+        setTitle(activity_title);
 
         etName = findViewById(R.id.etName);
         etMob = findViewById(R.id.etMobNo);

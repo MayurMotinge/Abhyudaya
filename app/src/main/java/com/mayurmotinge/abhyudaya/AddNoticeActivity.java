@@ -20,5 +20,7 @@ public class AddNoticeActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        setTitle("AddNotice");
+
     }
 }
