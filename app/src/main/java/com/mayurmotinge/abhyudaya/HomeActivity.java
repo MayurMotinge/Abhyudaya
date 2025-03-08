@@ -16,15 +16,20 @@ import androidx.core.view.OnApplyWindowInsetsListener;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.internal.ViewUtils;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     BottomNavigationView bnvHome;
     ImageView ivProfile;
     TextView tvPageTitle;
+
+    private BottomNavigationView bottomNavigationView;
+    private FragmentManager fragmentManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,8 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         bnvHome = findViewById(R.id.bottom_navigation);
         bnvHome.setOnNavigationItemSelectedListener(this);
         bnvHome.setSelectedItemId(R.id.home);
+
+        fragmentManager = getSupportFragmentManager();
         
         ViewCompat.setOnApplyWindowInsetsListener(bnvHome, new OnApplyWindowInsetsListener() {
             @Override
@@ -85,23 +92,35 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     PeopleFragment peopleFragment = new PeopleFragment();
     NotificationsFragment notificationsFragment = new NotificationsFragment();
 
-
     @Override
-    public boolean onNavigationItemSelected( MenuItem item) {
+    public boolean onNavigationItemSelected(MenuItem item) {
+        MenuItem menuItemHome, menuItemPeople, menuItemNotifications;
 
-        if (item.getItemId() == R.id.home){
-            getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,
-                    homeFragment).commit();
+        menuItemHome = bnvHome.getMenu().findItem(R.id.home);
+        menuItemPeople = bnvHome.getMenu().findItem(R.id.people);
+        menuItemNotifications = bnvHome.getMenu().findItem(R.id.notifications);
+
+        menuItemHome.setIcon(R.drawable.icon_home);
+        menuItemPeople.setIcon(R.drawable.icon_people);
+        menuItemNotifications.setIcon(R.drawable.icon_bell);
+
+        if (item.getItemId() == R.id.home) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.flOnHome, homeFragment).commit();
+            menuItemHome.setIcon(R.drawable.icon_home_filled);
             return true;
-        } else if (item.getItemId() == R.id.people){
-            getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,
-                    peopleFragment).commit();
+        } else if (item.getItemId() == R.id.people) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.flOnHome, peopleFragment).commit();
+            menuItemPeople.setIcon(R.drawable.icon_people_filled);
             return true;
-        } else if (item.getItemId() == R.id.notifications){
-            getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,
-                    notificationsFragment).commit();
+        } else if (item.getItemId() == R.id.notifications) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.flOnHome, notificationsFragment).commit();
+            menuItemNotifications.setIcon(R.drawable.icon_bell_filled);
             return true;
         }
-        return true;
+
+        return false;
     }
 }

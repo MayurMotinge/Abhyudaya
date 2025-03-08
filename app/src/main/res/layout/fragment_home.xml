@@ -71,7 +71,7 @@
         android:layout_height="0dp"
         android:layout_weight="25"
         app:cardCornerRadius="16dp"
-        app:cardBackgroundColor="@color/gray"
+        app:cardBackgroundColor="@color/mixed_tan_cream"
         android:layout_marginTop="5dp">
 
         <RelativeLayout
@@ -79,7 +79,7 @@
             android:layout_height="match_parent"
             android:padding="16dp"
             android:background="@drawable/hone_card_bg"
-            android:backgroundTint="@color/black_cream">
+            android:backgroundTint="@color/black">
 
             <TextView
                 android:id="@+id/tvEventCardTitle"

@@ -16,40 +16,44 @@
         android:theme="@style/Theme.Abhyudaya"
         tools:targetApi="31">
         <activity
+            android:name=".ChatActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Abhyudaya.ActionBar" />
+        <activity
             android:name=".FeedbackListActivity"
             android:exported="false"
-            android:theme="@style/Theme.Abhyudaya.ActionBar"/>
+            android:theme="@style/Theme.Abhyudaya.ActionBar" />
         <activity
             android:name=".MaintenancesListActivity"
             android:exported="false"
-            android:theme="@style/Theme.Abhyudaya.ActionBar"/>
+            android:theme="@style/Theme.Abhyudaya.ActionBar" />
         <activity
             android:name=".NoticeEventListActivity"
             android:exported="false"
-            android:theme="@style/Theme.Abhyudaya.ActionBar"/>
+            android:theme="@style/Theme.Abhyudaya.ActionBar" />
         <activity
             android:name=".ViewEventActivity"
             android:exported="false"
-            android:theme="@style/Theme.Abhyudaya.ActionBar"/>
+            android:theme="@style/Theme.Abhyudaya.ActionBar" />
         <activity
             android:name=".ViewNoticeActivity"
             android:exported="false"
-            android:theme="@style/Theme.Abhyudaya.ActionBar"/>
+            android:theme="@style/Theme.Abhyudaya.ActionBar" />
         <activity
             android:name=".AddEventActivity"
             android:exported="false"
-            android:theme="@style/Theme.Abhyudaya.ActionBar"/>
+            android:theme="@style/Theme.Abhyudaya.ActionBar" />
         <activity
             android:name=".AddNoticeActivity"
             android:exported="false"
-            android:theme="@style/Theme.Abhyudaya.ActionBar"/>
+            android:theme="@style/Theme.Abhyudaya.ActionBar" />
         <activity
             android:name=".RegistrationActivity"
             android:exported="false" />
         <activity
             android:name=".EditUserInfoActivity"
             android:exported="false"
-            android:theme="@style/Theme.Abhyudaya.ActionBar"/>
+            android:theme="@style/Theme.Abhyudaya.ActionBar" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
