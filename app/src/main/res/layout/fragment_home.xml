@@ -8,314 +8,259 @@
     tools:context=".HomeFragment"
     tools:ignore="HardcodedText"
     android:orientation="vertical"
-    android:layout_marginBottom="35dp">
+    android:padding="10dp">
 
-    <!-- TODO: Update blank fragment layout -->
-
-     <LinearLayout
-         android:id="@+id/llHomeTop"
-         android:orientation="horizontal"
+     <androidx.cardview.widget.CardView
+         android:id="@+id/cvNoticeCard"
          android:layout_width="match_parent"
          android:layout_height="0dp"
-         android:layout_weight="24"
-         android:layout_marginTop="10dp"
-         android:weightSum="2">
+         android:layout_weight="25"
+         app:cardCornerRadius="16dp"
+         app:cardBackgroundColor="@color/tan"
+         android:layout_marginBottom="5dp">
 
-         <androidx.cardview.widget.CardView
-             android:id="@+id/cvMaintenanceCard"
-             android:layout_width="0dp"
+         <RelativeLayout
+             android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:layout_weight="1"
-             android:layout_marginStart="10dp"
-             android:layout_marginEnd="5dp"
-             app:cardBackgroundColor="@color/black_cream"
-             app:cardCornerRadius="15dp">
+             android:padding="16dp"
+             android:background="@drawable/hone_card_bg">
 
-             <LinearLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:orientation="vertical"
-                 android:padding="10dp"
-                 android:gravity="bottom"
-                 android:background="@drawable/hone_card_bg"
-                 android:backgroundTint="@color/tan">
+             <TextView
+                 android:id="@+id/tvNoticeCardTitle"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Notice Title"
+                 android:textSize="20sp"
+                 android:textColor="@color/white"
+                 android:textStyle="bold"
+                 android:layout_above="@id/tvNoticeCardDescription"/>
 
-                 <TextView
-                     android:id="@+id/tvMaintenanceTitle"
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:text="Maintenance"
-                     android:textColor="@color/white"
-                     android:textSize="16sp"
-                     tools:ignore="HardcodedText" />
+             <TextView
+                 android:id="@+id/tvNoticeCardDescription"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Description"
+                 android:textSize="16sp"
+                 android:textColor="@color/white"
+                 android:layout_above="@id/tvNoticeCardSentAt"/>
 
-                 <TextView
-                     android:id="@+id/tvMaintenanceAmount"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="Amount"
-                     android:textSize="18sp"
-                     android:textColor="@color/white"
-                     />
+             <TextView
+                 android:id="@+id/tvNoticeCardSentAt"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Sent At"
+                 android:textColor="@color/transp_white"
+                 android:layout_alignParentBottom="true"/>
 
-                 <TextView
-                     android:id="@+id/tvMaintenanceDueDate"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="Due Date"
-                     android:textSize="14sp"
-                     android:textColor="@color/transp_white"/>
+             <ImageView
+                 android:id="@+id/ivNoticeList"
+                 android:layout_width="35dp"
+                 android:layout_height="35dp"
+                 android:layout_alignParentBottom="true"
+                 android:layout_alignParentEnd="true"
+                 android:src="@drawable/icon_list"
+                 app:tint="@color/white"/>
 
-             </LinearLayout>
+         </RelativeLayout>
 
-         </androidx.cardview.widget.CardView>
+     </androidx.cardview.widget.CardView>
 
-         <androidx.cardview.widget.CardView
-             android:id="@+id/cvMaintenanceCardAdm"
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight="1"
-             android:layout_marginStart="10dp"
-             android:layout_marginEnd="5dp"
-             app:cardBackgroundColor="@color/black_cream"
-             app:cardCornerRadius="15dp"
-             android:visibility="gone">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvEventCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/gray"
+        android:layout_marginTop="5dp">
 
-             <LinearLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:orientation="vertical"
-                 android:padding="10dp"
-                 android:gravity="bottom"
-                 android:background="@drawable/hone_card_bg"
-                 android:backgroundTint="@color/tan">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:background="@drawable/hone_card_bg"
+            android:backgroundTint="@color/black_cream">
 
-                 <TextView
-                     android:id="@+id/tvMaintenanceTitleAdm"
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:text="Maintenance"
-                     android:textColor="@color/white"
-                     android:textSize="16sp"
-                     tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/tvEventCardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Title"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_above="@id/tvEventCardDescription"/>
 
-                 <TextView
-                     android:id="@+id/tvNoOfMentePaid"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="Paid"
-                     android:textSize="18sp"
-                     android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tvEventCardDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_above="@id/tvEventCardSentAt"/>
 
-                 <TextView
-                     android:id="@+id/tvNoOfMentePending"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="Pending"
-                     android:textSize="18sp"
-                     android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tvEventCardSentAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sent At"
+                android:textColor="@color/transp_white"
+                android:layout_alignParentBottom="true"/>
 
-                 <TextView
-                     android:id="@+id/tvNoOfResidents"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="No. of Residents"
-                     android:textSize="14sp"
-                     android:textColor="@color/transp_white"/>
+            <ImageView
+                android:id="@+id/ivEventList"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_list"
+                app:tint="@color/white"/>
 
-             </LinearLayout>
+        </RelativeLayout>
 
-         </androidx.cardview.widget.CardView>
-
-         <androidx.cardview.widget.CardView
-             android:id="@+id/cvFeedbackCard"
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight="1"
-             android:layout_marginLeft="5dp"
-             android:layout_marginRight="10dp"
-             app:cardBackgroundColor="@color/tan"
-             app:cardCornerRadius="15dp">
-
-             <LinearLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:orientation="vertical"
-                 android:background="@drawable/hone_card_bg"
-                 android:padding="10dp"
-                 android:gravity="bottom">
-
-                 <TextView
-                     android:id="@+id/tvFeedbackTitle"
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:text="Feedback"
-                     android:textColor="@color/white"
-                     android:textSize="16sp"/>
-
-                 <TextView
-                     android:id="@+id/tvFeedbackFrom"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="Feedback From"
-                     android:textSize="18dp"
-                     android:textColor="@color/white"/>
-
-                 <TextView
-                     android:id="@+id/tvFeedbackType"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="Feedback Type"
-                     android:textSize="14sp"
-                     android:textColor="@color/transp_white"/>
-
-             </LinearLayout>
-
-         </androidx.cardview.widget.CardView>
-
-     </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="36"
-        android:orientation="vertical">
+        android:layout_weight="25"
+        android:orientation="horizontal"
+        android:weightSum="3">
 
-        <TextView
-            android:id="@+id/tvTitleNotice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="4dp"
-            android:text="Recent Notice"
-            android:textColor="@color/white"
-            android:textSize="18sp"/>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvNoticeBoard"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/llMaintenance"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_below="@+id/tvTitleNotice"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@color/cream"
-            app:cardCornerRadius="15dp">
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ivMaintenance"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/icon_apartment"
+                android:layout_marginBottom="8dp"
+                app:tint="@color/tan"/>
 
-                <ImageView
-                    android:id="@+id/ivNoticeCardImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/app_icon_logo_black_cream"
-                    android:scaleType="centerCrop"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maintenance"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:background="@drawable/hone_card_bg"
-                    android:layout_height="match_parent"
-                    android:padding="10dp">
+        </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/ttNoticeTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Notice Title"
-                        android:textSize="18sp"
-                        android:layout_above="@id/ttNoticeDateTime"
-                        android:textColor="@color/white"/>
+        <LinearLayout
+            android:id="@+id/llAddFeedback"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
 
-                    <TextView
-                        android:id="@+id/ttNoticeDateTime"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:text="Date Time"
-                        android:textSize="16sp"
-                        android:textColor="@color/transp_white"/>
+            <ImageView
+                android:id="@+id/ivAddFeedback"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/icon_feedback"
+                android:layout_marginBottom="8dp"
+                app:tint="@color/tan"/>
 
-                </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feedbacks"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
 
-            </RelativeLayout>
+        </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/llEmergency"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivEmergency"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/icon_emergency"
+                android:layout_marginBottom="8dp"
+                app:tint="@color/tan"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLiveChatCard"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="36"
-        android:orientation="vertical">
+        android:layout_weight="25"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/mid_black_cream">
 
-        <TextView
-            android:id="@+id/tvTitleEventBoard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="4dp"
-            android:text="Events"
-            android:textColor="@color/white"
-            android:textSize="18sp"/>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvEventBoard"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@color/cream"
-            app:cardCornerRadius="15dp">
+            android:padding="16dp"
+            android:background="@drawable/hone_card_bg">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvLiveChatTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live Chat"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
 
-                <ImageView
-                    android:id="@+id/ivEventCardImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/app_icon_logo_black_cream"
-                    android:scaleType="centerCrop"/>
+            <TextView
+                android:id="@+id/tvRecentChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Chat"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_above="@id/tvChatSentBy"/>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:background="@drawable/hone_card_bg"
-                    android:layout_height="match_parent"
-                    android:padding="10dp">
+            <TextView
+                android:id="@+id/tvChatSentBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sent By"
+                android:textColor="@color/transp_white"
+                android:layout_alignParentBottom="true"/>
 
-                    <TextView
-                        android:id="@+id/ttEventTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Event Title"
-                        android:textSize="18sp"
-                        android:layout_above="@id/ttEventDateTime"
-                        android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/tvViewChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:text="View Chat"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
 
-                    <TextView
-                        android:id="@+id/ttEventDateTime"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:text="Date Time"
-                        android:textSize="16sp"
-                        android:textColor="@color/transp_white"/>
+        </RelativeLayout>
 
+    </androidx.cardview.widget.CardView>
 
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
 
 
 

@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.OnBackPressedCallback;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.OnApplyWindowInsetsListener;
@@ -45,9 +44,8 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         bnvHome.setSelectedItemId(R.id.home);
         
         ViewCompat.setOnApplyWindowInsetsListener(bnvHome, new OnApplyWindowInsetsListener() {
-            @NonNull
             @Override
-            public WindowInsetsCompat onApplyWindowInsets(@NonNull View v, @NonNull WindowInsetsCompat insets) {
+            public WindowInsetsCompat onApplyWindowInsets(View v, WindowInsetsCompat insets) {
                 int systemWindowInsetBottom = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).top;
                 ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
                 params.bottomMargin = systemWindowInsetBottom;
@@ -66,7 +64,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
             }
         });
 
-        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+        getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
                 Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.flOnHome); // Assuming flOnHome is your FrameLayout's ID
@@ -89,7 +87,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected( MenuItem item) {
 
         if (item.getItemId() == R.id.home){
             getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,

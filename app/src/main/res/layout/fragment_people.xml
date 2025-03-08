@@ -41,6 +41,7 @@
         android:id="@+id/residentsList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/rlSearchBar"/>
+        android:layout_below="@id/rlSearchBar"
+        android:padding="10dp"/>
 
 </RelativeLayout>
