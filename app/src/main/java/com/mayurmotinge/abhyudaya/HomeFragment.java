@@ -75,7 +75,7 @@ public class HomeFragment extends Fragment {
         ivNoticeList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ViewNoticeActivity.class);
+                Intent intent = new Intent(getActivity(), NoticeListActivity.class);
                 startActivity(intent);
             }
         });
@@ -83,7 +83,7 @@ public class HomeFragment extends Fragment {
         ivEventList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ViewEventActivity.class);
+                Intent intent = new Intent(getActivity(), EventListActivity.class);
                 startActivity(intent);
             }
         });

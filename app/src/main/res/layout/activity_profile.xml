@@ -30,7 +30,7 @@
             android:id="@+id/tvLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LOGOUT"
+            android:text="Logout"
             android:textColor="@color/white"
             android:textSize="18dp"
             android:layout_marginHorizontal="15dp"
@@ -136,10 +136,7 @@
         android:layout_marginHorizontal="15dp"
         android:text="Maintenance Charges"
         android:textColor="@color/white"
-        android:layout_below="@id/tvMaintenanceDate"
-        android:drawableRight="@drawable/icon_rupee"
-        android:drawableTint="@color/white"
-        android:drawablepadding="20p"/>
+        android:layout_below="@id/tvMaintenanceDate"/>
 
     <TextView
         android:id="@+id/tvMaintenanceCharges"
@@ -151,7 +148,9 @@
         android:layout_below="@id/tvMaintenanceChargesLb"
         android:layout_marginHorizontal="15dp"
         android:textSize="25sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        app:drawableStartCompat="@drawable/icon_rupee"
+        app:drawableTint="@color/cream" />
 
     <TextView
         android:id="@+id/tvDueDtate"
