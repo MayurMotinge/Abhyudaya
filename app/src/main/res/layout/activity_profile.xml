@@ -27,17 +27,16 @@
             android:layout_centerVertical="true"/>
 
         <TextView
-            android:id="@+id/tvProfileHouseNo"
+            android:id="@+id/tvLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="15dp"
-            android:gravity="center_vertical"
-            android:text="house No."
+            android:text="LOGOUT"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"/>
+            android:textSize="18dp"
+            android:layout_marginHorizontal="15dp"
+            android:drawablePadding="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
 
     </RelativeLayout>
 
@@ -99,17 +98,95 @@
         android:layout_below="@id/tvEmail"/>
 
     <TextView
-        android:id="@+id/tvLogout"
+        android:id="@+id/tvProfileHouseNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logout"
-        android:textColor="@color/white"
-        android:drawableRight="@drawable/icon_logout"
-        android:drawableTint="@color/white"
-        android:textSize="18dp"
         android:layout_marginHorizontal="15dp"
-        android:drawablePadding="5dp"
-        android:layout_below="@id/cvProfilePhoto"
-        android:layout_alignParentRight="true"/>
+        android:gravity="center_vertical"
+        android:text="house No."
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/cvProfilePhoto"/>
+
+    <View
+        android:id="@+id/vDivider1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tvProfileHouseNo"
+        android:background="@color/cream"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginHorizontal="15dp"/>
+
+    <TextView
+        android:id="@+id/tvMaintenanceDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:text="DD-Month-YYYY"
+        android:textColor="@color/transp_white"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/vDivider1"/>
+
+    <TextView
+        android:id="@+id/tvMaintenanceChargesLb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:text="Maintenance Charges"
+        android:textColor="@color/white"
+        android:layout_below="@id/tvMaintenanceDate"
+        android:drawableRight="@drawable/icon_rupee"
+        android:drawableTint="@color/white"
+        android:drawablepadding="20p"/>
+
+    <TextView
+        android:id="@+id/tvMaintenanceCharges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:textColor="@color/cream"
+        android:textStyle="bold"
+        android:layout_below="@id/tvMaintenanceChargesLb"
+        android:layout_marginHorizontal="15dp"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvDueDtate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:text="Due Date: DD-Month-YYYY"
+        android:textColor="@color/transp_white"
+        android:layout_margin="16dp"
+        android:layout_below="@id/tvMaintenanceCharges"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPayNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="6dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvMaintenanceCharges"
+        android:background="@drawable/btn_shape"
+        android:backgroundTint="@color/tan"
+        android:text="Pay Now"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:paddingHorizontal="20dp"/>
+
+    <View
+        android:id="@+id/vDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/btnPayNow"
+        android:background="@color/cream"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginHorizontal="15dp"/>
+
 
 </RelativeLayout>
