@@ -8,7 +8,8 @@
     tools:context=".HomeFragment"
     tools:ignore="HardcodedText"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:background="@color/black_cream">
 
      <androidx.cardview.widget.CardView
          android:id="@+id/cvNoticeCard"
