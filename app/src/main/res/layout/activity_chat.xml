@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/llChatInputs"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:padding="15dp"/>
 
 
     <LinearLayout
@@ -21,7 +22,38 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/llChatInputs"
         android:orientation="vertical"
-        android:paddingHorizontal="16dp">
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Ysterday"
+            android:textSize="12sp"
+            android:textColor="@color/transp_white"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="6dp"/>
+
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            layout="@layout/item_chat_received"
+            android:layout_marginBottom="6dp"/>
+
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            layout="@layout/item_chat_sent"
+            android:layout_gravity="end"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Today"
+            android:textSize="12sp"
+            android:textColor="@color/transp_white"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="6dp"/>
 
         <include
             android:layout_height="wrap_content"
@@ -45,33 +77,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:paddingHorizontal="8dp"
-        android:paddingBottom="10dp">
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_chat_msg_input">
+
+
 
         <EditText
             android:id="@+id/etChatMsgInput"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/shape_chat_msg_input"
             android:textColor="@color/white"
             android:hint="Type Message"
             android:textColorHint="@color/transp_white"
-            android:paddingHorizontal="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="5dp"
             android:layout_toStartOf="@id/btnSendMsg"
-            android:drawableStart="@drawable/icon_add"
-            android:drawablePadding="6dp"/>
+            android:drawableStart="@drawable/icon_attach_file"
+            android:drawableTint="@color/transp_white"
+            android:drawablePadding="5dp"
+            android:background="@color/transp"/>
 
         <ImageButton
             android:id="@+id/btnSendMsg"
             android:layout_width="40dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_alignParentEnd="true"
-            android:background="@color/transp"
-            android:backgroundTint="@color/transp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_chat_msg_input"
+            android:backgroundTint="@color/tan"
             android:src="@drawable/icon_send_msg"
             app:tint="@color/white"
             android:scaleType="fitCenter"
-            android:layout_marginStart="10dp"/>
+            android:padding="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
 
     </RelativeLayout>
 

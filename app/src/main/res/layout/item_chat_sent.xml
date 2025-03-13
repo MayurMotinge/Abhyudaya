@@ -17,7 +17,7 @@
             android:text="You"
             android:textSize="9sp"
             android:textStyle="bold"
-            android:textColor="@color/black_cream"/>
+            android:textColor="@color/black_tan"/>
 
         <TextView
             android:id="@+id/textMessageSent"
