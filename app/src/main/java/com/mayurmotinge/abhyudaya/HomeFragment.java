@@ -45,7 +45,7 @@ public class HomeFragment extends Fragment {
 
     ImageView ivNoticeList, ivEventList;
 
-    LinearLayout llMaintenanceAddFeedbackEmergency;
+    LinearLayout llMaintenanceAddFeedbackEmergency, llMaintenance, llFeedbacks, llEmergency;
 
     ProgressBar progressBar;
 
@@ -76,17 +76,26 @@ public class HomeFragment extends Fragment {
         ivEventList = view.findViewById(R.id.ivEventList);
 
         llMaintenanceAddFeedbackEmergency = view.findViewById(R.id.llMaintenanceAddFeedbackEmergency);
+        llMaintenance = view.findViewById(R.id.llMaintenance);
+        llFeedbacks = view.findViewById(R.id.llFeedbacks);
+        llEmergency = view.findViewById(R.id.llEmergency);
 
         progressBar = view.findViewById(R.id.homeProgressBar);
 
         fetchHomeData();
 
-
-
+        //Setting Click Listeners
         cvNotice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ViewNoticeActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivNoticeList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), NoticeListActivity.class);
                 startActivity(intent);
             }
         });
@@ -95,6 +104,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ViewEventActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivEventList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), EventListActivity.class);
                 startActivity(intent);
             }
         });
@@ -107,26 +123,30 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        ivNoticeList.setOnClickListener(new View.OnClickListener() {
+        llMaintenance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), NoticeListActivity.class);
+                Intent intent = new Intent(getActivity(), ProfileActivity.class);
                 startActivity(intent);
             }
         });
-
-        ivEventList.setOnClickListener(new View.OnClickListener() {
+        llFeedbacks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), EventListActivity.class);
+                Intent intent = new Intent(getActivity(), FeedbackListActivity.class);
                 startActivity(intent);
             }
         });
+        llEmergency.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
 
         return view;
     }
-
+    //Fetching Data from the server
     private void fetchHomeData() {
         RequestQueue queue = Volley.newRequestQueue(getActivity());
 
@@ -178,6 +198,7 @@ public class HomeFragment extends Fragment {
 
     }
 
+    //Showing Error Message
     private void showError(String msg){
         cvNotice.setVisibility(View.GONE);
         cvEvent.setVisibility(View.GONE);
@@ -187,6 +208,7 @@ public class HomeFragment extends Fragment {
         tvError.setText(msg);
     }
 
+    //Setting up the cards
     private void setLiveChatCard(JSONObject jsonObject) {
 
         try {
@@ -228,5 +250,6 @@ public class HomeFragment extends Fragment {
 
     }
 
+    //
 
 }
