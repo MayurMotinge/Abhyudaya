@@ -208,7 +208,7 @@ public class HomeFragment extends Fragment {
         tvError.setText(msg);
     }
 
-    //Setting up the cards
+    //Setting up the cards at homepage
     private void setLiveChatCard(JSONObject jsonObject) {
 
         try {
