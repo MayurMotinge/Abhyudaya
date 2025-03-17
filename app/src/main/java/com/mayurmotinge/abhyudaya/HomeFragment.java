@@ -140,7 +140,7 @@ public class HomeFragment extends Fragment {
         llEmergency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                emergencyClicked();
             }
         });
 
@@ -250,6 +250,11 @@ public class HomeFragment extends Fragment {
 
     }
 
-    //
+    //Emergency card Clicked
+    private void emergencyClicked() {
+
+
+
+    }
 
 }
