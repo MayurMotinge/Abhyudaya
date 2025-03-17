@@ -21,7 +21,6 @@
             android:layout_height="45dp"
             android:background="@drawable/shape_search"
             app:queryHint="Search Person"
-            android:theme="@style/Theme.AbhyudayaWithBlackText"
             android:layout_toLeftOf="@id/ivAddPeople"
             app:iconifiedByDefault="false"/>
 

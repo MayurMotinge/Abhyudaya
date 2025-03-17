@@ -37,16 +37,19 @@
             android:textSize="24sp"
             android:layout_centerVertical="true"/>
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ivProfile"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:scaleType="centerCrop"
             android:src="@drawable/icon_profile"
+            android:tint="@color/black"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="15dp"
             android:padding="5dp"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            app:shapeAppearanceOverlay="@style/CircleImageView"/>
 
     </RelativeLayout>
 
