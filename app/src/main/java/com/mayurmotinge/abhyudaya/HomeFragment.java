@@ -228,7 +228,7 @@ public class HomeFragment extends Fragment {
             JSONObject notice = jsonObject.getJSONObject("notice");
             tvNoticeCardTitle.setText(notice.getString("title"));
             tvNoticeCardDescription.setText(notice.getString("description"));
-            tvNoticeCardSentAt.setText(notice.getString("sentAt"));
+            tvNoticeCardSentAt.setText(notice.getString("created_at"));
         } catch (Exception e){
             showError("Failed to Display Data");
             Log.e("Home", "Error Parsing Response", e);
@@ -242,7 +242,7 @@ public class HomeFragment extends Fragment {
             JSONObject event = jsonObject.getJSONObject("event");
             tvEventCardTitle.setText(event.getString("title"));
             tvEventCardDescription.setText(event.getString("description"));
-            tvEventCardSentAt.setText(event.getString("sentAt"));
+            tvEventCardSentAt.setText(event.getString("created_at"));
         } catch (Exception e){
             showError("Failed to Display Data");
             Log.e("Home", "Error Parsing Response", e);

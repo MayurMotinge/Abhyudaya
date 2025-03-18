@@ -51,4 +51,12 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.volley)
     implementation(libs.android.async.http)
+    implementation(libs.glide)
+
+    
+    implementation(libs.retrofit.v290)
+    implementation(libs.converter.gson)
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+    implementation(libs.converter.scalars)
 }

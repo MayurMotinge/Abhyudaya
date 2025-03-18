@@ -22,24 +22,38 @@
             android:textColor="@color/tan"/>
 
         <TextView
-            android:id="@+id/textMessageReceived"
+            android:id="@+id/textMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello!"
+            android:text="Hello! How are you?"
             android:textSize="16sp"
             android:textColor="@android:color/white"
             android:layout_below="@id/tvSender"/>
 
+        <ImageView
+            android:id="@+id/ivAttachedImage"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSender"
+            android:src="@drawable/icon_attach_file"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/ivAttachedVideo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSender"
+            android:visibility="gone"/>
+
         <TextView
-            android:id="@+id/textTimestampReceived"
+            android:id="@+id/textTimestamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="12:54 PM"
+            android:text="12:55 PM"
             android:textSize="9sp"
             android:textColor="@color/transp_white"
-            android:layout_toEndOf="@id/textMessageReceived"
-            android:layout_alignBottom="@id/textMessageReceived"
-            android:paddingLeft="6dp" />
+            android:layout_toEndOf="@id/tvSender"
+            android:layout_marginStart="6dp"/>
     </RelativeLayout>
 
 </LinearLayout>

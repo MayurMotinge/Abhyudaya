@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/llChatInputs"
         android:orientation="vertical"
-        android:paddingHorizontal="15dp">
+        android:paddingHorizontal="15dp"
+        android:visibility="gone">
 
         <TextView
             android:layout_height="wrap_content"
@@ -81,6 +82,16 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/shape_chat_msg_input">
 
+        <ImageButton
+            android:id="@+id/attachButton"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_attach_file"
+            android:background="@color/transp"
+            android:foregroundTint="@color/transp_white"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            app:tint="@color/transp_white" />
 
 
         <EditText
@@ -90,12 +101,10 @@
             android:textColor="@color/white"
             android:hint="Type Message"
             android:textColorHint="@color/transp_white"
-            android:paddingStart="10dp"
+            android:paddingStart="5dp"
             android:paddingEnd="5dp"
+            android:layout_toEndOf="@id/attachButton"
             android:layout_toStartOf="@id/btnSendMsg"
-            android:drawableStart="@drawable/icon_attach_file"
-            android:drawableTint="@color/transp_white"
-            android:drawablePadding="5dp"
             android:background="@color/transp"/>
 
         <ImageButton
@@ -114,5 +123,31 @@
             android:layout_marginEnd="5dp"/>
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mediaPreviewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:layout_above="@id/llChatInputs"
+        android:layout_marginHorizontal="15dp">
+
+        <ImageView
+            android:id="@+id/ivSelectedMedia"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/btnRemoveMedia"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_close"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
 
 </RelativeLayout>
